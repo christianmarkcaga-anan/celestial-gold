@@ -24,12 +24,10 @@ p {
     color: var(--black);   
 }
 .container {
-  max-width: 750px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 25px;
 }
-
 h1 {
   color: var(--primary-color);
   font-size: 2.5rem;
@@ -41,8 +39,21 @@ h2 {
   font-size: 1.5rem;
   margin: 10px 0;
 }
+.span-red {
+    color: var(--red);
+    font-weight: 800;
+}
+.span-green {
+    color: var(--green);
+    font-weight: 800;
+}
+
+
+
+
 .gift-section {
     text-align: center;
+    padding: 50px 25px;
 }
 .gift-section h3 {
   color: #c28f2c;
@@ -55,9 +66,10 @@ h2 {
   line-height: 1.6;
   font-weight: 700;
 }
-.gift-section img {
+.gift-section .img-container {
     margin: 15px 0;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 .gift-section span {
     display: inline-block;
@@ -117,7 +129,10 @@ h2 {
 
 /* GOLD CTA BOX */
 .gold-cta-box {
-    padding: 45px;
+    padding: 25px;
+}
+.gold-cta-box .cta-box {
+    padding: 50px;
     border-radius: 25px;
     background: #B9823C;
     text-align: center;
@@ -224,4 +239,143 @@ h2 {
 }
 .prod-testimonial .prod-testimoinal-author strong {
     font-weight: 800;
+}
+
+/* WARNING SECTION */
+.warning-section {
+    padding: 0px 25px 50px;
+}
+.warning-section .warning-box {
+    text-align: center;
+}
+.warning-box h2 {
+    color: var(--red);
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0;
+}
+.warning-box p {
+    padding-top: 20px;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+/* BOXED AUTHOR */
+.boxed-author-message {
+    padding: 0 25px 50px;
+}
+.boxed-author-message .boxed-author-message-box {
+    padding: 50px;
+    border-radius: 50px;
+    border: 10px solid #B9823C;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+}
+.boxed-author-message .top-author-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-bottom: 25px;
+}
+.boxed-author-message .top-author-content .author-img {
+    max-width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.boxed-author-message .top-author-content .author-img img {
+    width: 100%;
+}
+.boxed-author-message .top-author-content .date {
+    font-size: 20px;
+    font-weight: 700;
+}
+.boxed-author-message .top-author-content .box-title {
+    font-size: 25px;
+    font-weight: 800;
+    padding-top: 10px;
+    color: #394D9D;
+}
+.boxed-author-message .main-box-message p {
+    padding-top: 15px;
+}
+.two-col-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 25px 0 50px;
+}
+.two-col-container .col-left,
+.two-col-container .col-right {
+    flex: 1;
+}
+.two-col-container .small-testi {
+    padding: 5px;
+}
+.two-col-container .small-testi p {
+    font-size: 18px;
+    line-height: 27px;
+    font-style: italic;
+}
+
+.two-col-container .small-testi .author-box {
+    margin-top: 15px;
+}
+.two-col-container .small-testi .author-box .author-name {
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 10px;
+}
+.two-col-container .small-testi .author-box .rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.two-col-container .small-testi .author-box .rating img {
+    max-width: 100px;
+    width: 100%;
+}
+.boxed-author-message .img-container {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.boxed-author-message .img-container img {
+    width: 100%;
+}
+
+.boxed-author-message .bottom-message {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+.boxed-author-message .bottom-message h2 {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 25px;
+    margin: 0;
+}
+.bottom-message .prices {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.bottom-message .prices .col-left,
+.bottom-message .prices .col-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bottom-message .prices span {
+    font-size: 20px;
+}
+.bottom-message .prices .span-red,
+.bottom-message .prices .span-green {
+    font-size: 40px;
+}
+.bottom-message .prices .span-red {
+    text-decoration: line-through;
 }
