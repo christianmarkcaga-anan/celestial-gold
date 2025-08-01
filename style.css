@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+:root {
+    --primary-color: #b9823c;
+    --secondary-color: #a69877;
+    --red: #e7303f;
+    --green: #008000;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Nunito", sans-serif;
+}
+p {
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--black);   
+}
+.container {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 25px;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.gift-section {
+    text-align: center;
+}
+.gift-section h3 {
+  color: #c28f2c;
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+}
+
+.gift-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+.gift-section img {
+    margin: 15px 0;
+    display: inline-block;
+}
+.gift-section span {
+    display: inline-block;
+}
+.gift-section strong {
+    color: var(--green);
+    font-weight: 700;
+}
+/* PRODUCT INTRO */
+.product-intro {
+    text-align: center;
+}
+.product-intro span {
+    font-weight: 700;
+}
+
+/* AUTHOR MESSAGE */
+.author-message {
+    padding-top: 25px;
+}
+.author-message .first-column {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.author-message .first-column img {
+    border-radius: 25px;    
+}
+.author-message .first-column p {
+    padding-top: 15px;
+}
+.author-message .first-column span {
+    font-weight: 800;
+}
+.author-message .second-column p {
+    padding-top: 15px;
+}
+.author-message .second-column span {
+    font-weight: 800;
+}
+
+/* COUNTDOWN */
+.countdown {
+    text-align: center;
+    padding: 25px 0;
+}
+.countdown span {
+    font-weight: 800;
+}
+.countdown .countdown-text {
+    font-weight: 800;
+    font-size: 32px;
+}
+.countdown .countdown-number {
+    color: var(--red);
+}
+
+/* GOLD CTA BOX */
+.gold-cta-box {
+    padding: 45px;
+    border-radius: 25px;
+    background: #B9823C;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border: 10px solid #AA3815;
+}
+.gold-cta-box p {
+    font-weight: 700;
+}
+
+/* PRODUCT SECTION */
+.product-section {
+    padding: 50px 0;
+}
+.product-section h2 {
+    text-align: center;
+}
+.product-section .prod-box {
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.product-section .prod-box::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url(./assets/ingrd-bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+.prod-box {
+    margin: 25px 0;
+}
+.prod-box .prod-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: #4D2828;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+}
+.prod-box .prod-sub-title {
+    padding: 25px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+.prod-box .prod-image {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+}
+.prod-box .prod-image img {
+    width: 100%;
+}
+.prod-price {
+    padding: 25px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--red);
+}
+.prod-details {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.prod-testimonial {
+    padding: 0 25px 50px;
+}
+.prod-testimonial .rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.prod-testimonial .rating img {
+    max-width: 100px;
+    width: 100%;
+}
+.prod-testimonial .prod-testimonial-message {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    padding-bottom: 15px;
+}
+.prod-testimonial .prod-testimonial-message img {
+    max-width: 25px;
+    height: 25px;
+}
+.prod-testimonial .prod-testimoinal-author strong {
+    font-weight: 800;
+}
