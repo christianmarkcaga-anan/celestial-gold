@@ -62,15 +62,70 @@ h2 {
     object-fit: cover;
     object-position: center;
 }
-.gold-text {
-    color: var(--primary-color);
-}
+
 
 
 /* ==================== STYLES ==================== */
+/* EXIT POPUP */
+#exit-popup {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 25px;
+    border: 8px solid #ffbf00;
+}
+#exit-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9998;
+}
+
+#exit-popup p strong {
+    font-weight: 800;
+    color: #1c8da7;
+    font-size: 40px;
+    display: block;
+    padding-bottom: 20px;
+}
+#exit-popup p {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+}
+#close-popup {
+    position: absolute;
+    top: 0;
+    right: -5px;
+    border: none;
+    background: #ffbf00;
+    padding: 6px 10px;
+    border-radius: 0px 0 0 25px;
+    cursor: pointer;
+}
+#continue {
+    font-size: 20px;
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 0;
+    background-color: #f14668;
+    color: white;
+    margin-top: 25px;
+    cursor: pointer;
+}
 /* HEADER */
 .header .logo {
-    background: #4d2828;
+    background: rgb(20, 76, 111);
     text-align: center;
     padding: 12px;
 }
@@ -108,6 +163,27 @@ h2 {
     display: flex;
     gap: 15px;
     flex-direction: column;
+}
+.gift-section .heading-container .blue-text {
+    font-size: 41px;
+    line-height: 51px;
+    color: #1c8da7;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+.gift-section .heading-container .blue-text > span {
+    text-decoration: underline;
+    text-decoration-color: #ffe400;
+    text-decoration-thickness: 4px;
+}
+.gift-section .heading-container .second-par {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 60px;
+}
+.gift-section .heading-container .second-par span {
+    color: #f14668;
+    text-decoration: underline;
 }
 .gift-section .img-container {
     margin: 15px auto;

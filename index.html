@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Celestial Gold</title>
   <link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="./assets/favicon.png">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+
+    <div id="exit-overlay"></div>
+    <div id="exit-popup">
+        <p><strong>WAIT!</strong></p>
+        <p>Don't leave our website yet.</p>
+        <p>Your order is not complete.</p>
+        <button id="continue">Finish reading this page</button>
+        <button id="close-popup"><img src="./assets/fontisto_close.svg" alt=""></button>
+    </div>
 
     <div class="header">
         <div class="logo">
@@ -31,8 +41,8 @@
         <div class="container">
             <div class="heading-container">
                 <h1>Congratulations!</h1>
-                <h2 class="gold-text">You Qualify To Receive A Final Exclusive Free Gift</h2>
-                <h2>You’ve Initiated Your Awakening… Now Fully Align Your Body, Mind, and Spirit To Their Highest Frequency With This Sacred Collection</h2>
+                <div class="blue-text">You Qualify To Receive A Final Exclusive <span>Free Gift</span></div>
+                <div class="second-par">You’ve Initiated Your Awakening… Now Fully Align Your <span>Body</span>, <span>Mind</span>, and <span>Spirit</span> To Their Highest Frequency With This Sacred Collection</div>
             </div>
             <div class="img-container">
                 <img src="./assets/wellness-box-large-new 1.png" alt="wellnexx-box">

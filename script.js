@@ -55,10 +55,25 @@
             });
         },
 
+        exitPopup: function () {
+            $(document).on('mouseleave', function(e) {
+                if (e.clientY <= 0) {
+                $('#exit-popup').fadeIn();
+                $('#exit-overlay').fadeIn();
+                }
+            });
+
+            $('#close-popup, #exit-overlay, #continue').on('click', function() {
+                $('#exit-popup').fadeOut();
+                $('#exit-overlay').fadeOut();
+            });
+        },
+
         init: function () {
             this.countdown();
             this.date();
             this.checkboxValidation();
+            this.exitPopup();
         }
     };
 
