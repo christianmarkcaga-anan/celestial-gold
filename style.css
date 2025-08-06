@@ -20,8 +20,8 @@ body {
   font-family: "Nunito", sans-serif;
 }
 p {
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 24px;
+    line-height: 30px;
     color: var(--black);   
 }
 .container {
@@ -87,7 +87,7 @@ h2 {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.8);
     z-index: 9998;
 }
 
@@ -110,7 +110,7 @@ h2 {
     border: none;
     background: #ffbf00;
     padding: 6px 10px;
-    border-radius: 0px 0 0 25px;
+    border-radius: 0px 15px 0 25px;
     cursor: pointer;
 }
 #continue {
@@ -218,6 +218,9 @@ h2 {
     gap: 25px;
     align-items: flex-start;
 }
+.author-message .first-column .texts p {
+    padding-bottom: 20px;
+}
 .author-message .first-column img {
     border-radius: 25px;    
 }
@@ -226,7 +229,7 @@ h2 {
     font-weight: 800;
 }
 .author-message .second-column p {
-    padding-top: 15px;
+    padding-bottom: 20px;
 }
 .author-message .second-column span {
     font-weight: 800;
@@ -241,11 +244,17 @@ h2 {
     font-weight: 800;
 }
 .countdown .countdown-text {
-    font-weight: 800;
+    font-weight: 600;
     font-size: 24px;
 }
 .countdown .countdown-number {
     color: var(--red);
+}
+.countdown-text > div:last-child {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 800;
+    padding-top: 15px;
 }
 
 /* GOLD CTA BOX */
@@ -543,7 +552,7 @@ h2 {
     height: 50px;
     background: white;
     border-radius: 10px;
-    border: 5px solid #B9823C;
+    border: 7px solid #B9823C;
     cursor: pointer;
     position: relative;
 }
@@ -570,10 +579,10 @@ h2 {
     gap: 30px;
 }
 .vip-expiration .box-description .btn-container a.yellow-btn {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 32px;
+    line-height: 42px;
     text-decoration: none;
-    color: black;
+    color: #0055c2;
     font-weight: 800;
     display: inline-block;
     padding: 25px 15px;
@@ -583,6 +592,10 @@ h2 {
     border: 2px solid #1C8DA7;
     margin: 25px 0 0;
     width: 100%;
+    transition: 0.3s;
+}
+.vip-expiration .box-description .btn-container a.yellow-btn:hover {
+    background: white;
 }
 .vip-expiration .box-description .btn-container a.send-transformation-stack {
     font-size: 20px;
@@ -609,6 +622,62 @@ h2 {
     transform: translate(-50%,-50%);
     opacity: 1;
 }
+.box-form {
+  position: relative;
+}
+
+.click-box {
+  position: relative;
+  min-width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 10px;
+  border: 7px solid #B9823C;
+  cursor: pointer;
+  z-index: 2;
+  animation: clickBoxScale 1.5s infinite ease-in-out;
+}
+
+.click-box::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(185, 130, 60, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: outer-ripple 2s infinite ease-out;
+  animation-delay: 0.5s;
+  z-index: -1;
+}
+
+@keyframes clickBoxScale {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes outer-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+
 
 /* FINAL NOTICE */
 .final-notice {
@@ -634,10 +703,10 @@ h2 {
     padding-top: 15px;
 }
 .final-notice .btn-container a {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 32px;
+    line-height: 42px;
     text-decoration: none;
-    color: black;
+    color: #0055c2;
     font-weight: 800;
     display: inline-block;
     padding: 25px 15px;
@@ -647,8 +716,11 @@ h2 {
     border: 2px solid #1C8DA7;
     margin: 10px 0 0;
     width: 100%;
+    transition: 0.3s;
 }
-
+.final-notice .btn-container a:hover {
+    background: white;
+}
 
 /* ==================== RESPONSIVE ==================== */
 
@@ -666,6 +738,10 @@ h2 {
         font-size: 30px;
         line-height: 40px;
     }
+    p {
+        font-size: 20px;
+        line-height: 30px;
+    }
     .author-message .first-column {
         flex-direction: column;
     }
@@ -674,6 +750,10 @@ h2 {
     }
     .author-message .first-column {
         flex-direction: column;
+    }
+    .gift-section .heading-container .second-par {
+        font-size: 30px;
+        line-height: 40px;
     }
     .gold-cta-box .cta-title {
         font-size: 30px;
@@ -738,8 +818,8 @@ h2 {
         line-height: 30px;
     }
     .vip-expiration .box-form .click-box {
-        max-width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
     }
     .vip-expiration .box-content {
         padding: 15px;
